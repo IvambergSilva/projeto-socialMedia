@@ -16,7 +16,6 @@ body {
     background-color: #EFEFEF;
     font-family: var(--fontPrincipal);
     overflow-x: hidden;
-    
 }
 
 nav {
@@ -27,9 +26,10 @@ nav {
     background:var(--corPrincipal);
     position: fixed;
     top: 0;
+    width: 100%;
 }
 
-.nav-left, .nav-left ul {
+.nav-left, .nav-right ul {
     display: flex;
     align-items: center;
 }
@@ -37,6 +37,7 @@ nav {
 .logo {
     display: flex;
     align-items: center;
+    margin-right: 180px;
 }
 
 .logoImg {
@@ -55,13 +56,13 @@ ul li {
     cursor: pointer;
 }
 
-.nav-left i {
+.nav-right i {
     font-size: 1.2em;
     margin: 0 20px;
     color: #FFF;
 }
 
-.nav-left i:hover {
+.nav-right i:hover {
     transform: scale(1.1);
 }
 
@@ -109,7 +110,7 @@ main {
 
 .blockMain {
     background-color: #FFF;
-    width: 700px;
+    max-width: 700px;
     border-radius: 10px;
     margin: 25px auto;
 }
@@ -150,44 +151,12 @@ main {
     letter-spacing: 1px;
 }
 
-.emojis {
-    font-size: 1.25em;
-    align-items: center;
-    height: 25px;
-    margin: 10px 0 0 25px;
-    /* display: none; */
-    animation: animationFade;
-}
-
 @keyframes animationFade {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
-    }
-}
-
-.emojis p {
-    display: inline;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-.emojis p:hover {
-    animation: 1s infinite animationRotate;
-    transition: all 0.5s;
-}
-
-@keyframes animationRotate {
-    0% {
-        transform: rotate(10deg);
-    }
-    50% {
-        transform: rotate(-10deg);
-    }
-    100% {
-        transform: rotate(10deg);
     }
 }
 
@@ -251,7 +220,7 @@ main {
 }
 
 
-/*  */
+/* FEED */
 
 .post-header .info {
     margin-left: 15px;
@@ -331,9 +300,6 @@ main {
     color: lawngreen;
 }
 
-
-/* colocar uma cor para cada um, ao clicar ou até no hover */
-
 .load-more-btn {
     display: block;
     margin: auto;
@@ -353,4 +319,55 @@ footer {
     color: #FFF;
     font: 1.2em var(--fontPrincipal);
     margin-top: 20px;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 1060px) {
+    .nav-right ul li i {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .search-box #pesquisar{
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .logo {
+        margin-right: 8vw;
+    }
+    .user-profile {
+        margin-right: 4vw;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    main {
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    .post-input ul i {
+        margin: 0;
+    }
+    .post-input ul span {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .search-box i{
+        border-radius: 20px;    
+        padding: 10px 0;
+        background-color: #FFF;
+    }
+    .search-box input{
+        display: none;
+    }
 }

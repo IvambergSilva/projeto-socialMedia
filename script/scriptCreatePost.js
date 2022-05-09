@@ -120,5 +120,4 @@ publicarBtn.addEventListener('click', function(){
         
         createPost(texto)
     }  
-
 })
