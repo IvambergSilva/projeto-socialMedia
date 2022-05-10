@@ -103,21 +103,25 @@ function createPostHeader() {
 function createPostText(paragrafo) {
     const description = document.createElement('p')
         description.classList.add('post-text')
-    description.textContent = paragrafo
+        description.textContent = paragrafo
 
     return description
 }
 
+document.querySelector('#textArea').addEventListener('click', function(){
+    document.querySelector('.publicar').classList.add('postPublicar2')
+})
+
 let publicarBtn = document.querySelector('.postPublicar')
 
 publicarBtn.addEventListener('click', function(){
-    const textArea = document.querySelector('#textArea')
 
+    const textArea = document.querySelector('#textArea')
+    
     const texto = textArea.value
 
     if (texto != ''){
         textArea.value = ''
-        
         createPost(texto)
     }  
 })

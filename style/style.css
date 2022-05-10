@@ -89,6 +89,13 @@ ul li {
     color: var(--corSecundaria);
 }
 
+.inputMediaQuery {
+    width: 110px;
+    background-color: #E9E9E9;
+    display: flex;
+    justify-content: center;
+}
+
 .search-box i {
     font-size: 1.2em;
     margin: 0 15px;
@@ -175,6 +182,13 @@ main {
 .postPublicar:hover {
     background-color: #0071EB90;
     transition: 0.2s;
+}
+
+.postPublicar2 {
+    background-color: #0071EB90;
+    transition: 0.2s;
+    border: none;
+
 }
 
 .post-input ul {
@@ -369,5 +383,9 @@ footer {
     }
     .search-box input{
         display: none;
+    }
+    
+    .nav-left {
+        position: relative;
     }
 }
